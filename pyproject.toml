@@ -1,0 +1,18 @@
+[project]
+name = "forge-api"
+version = "0.1"
+authors = [{ name="Manuel Staufer", email="manuel.staufervb@gmail.com"}]
+description = "*"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["Permissions", "User-Management", "Game-Development"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+[project.urls]
+Repository = "https://github.com/mstvb/forge"
+Issues = "https://github.com/mstvb/forge/issues"
+Discussions = "https://github.com/mstvb/forge/discussions"
