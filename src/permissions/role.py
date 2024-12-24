@@ -1,27 +1,43 @@
 class Role:
-    __slots__ = ['role_name', 'permissions']
+    """
+    Arguments:
+        role_name: [str] -> Name of Role as String
+        perms: dict[str, bool] -> Permissions of Role as Dict
 
-    def __init__(self, role_name: str, permissions: dict[str, bool]):
+    Todo:
+        - Better Exception Handling
+        
+    Methods:
+        add_perm: (perm: str, active: bool = True) -> Add a Permission to Role
+        set_perm: (perm: str, active: bool) -> Set Permission from Role
+        delete_perm: (perm: str) -> Delete Permission from Role
+        get_perm: (perm: str) -> Returns Permission as Boolean
+        get_perms: () -> Returns All Permissions from Role as Dict
+        
+    """
+    __slots__ = ['role_name', 'perms']
+
+    def __init__(self, role_name: str, perms: dict[str, bool]) -> None:
         self.role_name = role_name
-        self.permissions = permissions
+        self.perms = perms
 
-    def add_permission(self, permission_name: str, active: bool = True):
-        self.permissions[permission_name] = active
+    def add_perm(self, perm: str, active: bool = True) -> None:
+        self.perms[perm] = active
 
-    def set_permission(self, permission_name: str, active: bool):
-        self.permissions[permission_name] = active
+    def set_perm(self, perm: str, active: bool) -> None:
+        self.perms[perm] = active
 
-    def delete_permission(self, permission_name: str):
-        del self.permissions[permission_name]
+    def delete_perm(self, perm: str) -> None:
+        del self.perms[perm]
 
-    def get_permission(self, permission_name: str):
-        return self.permissions[permission_name]
+    def get_perm(self, perm: str) -> bool:
+        return self.perms[perm]
 
-    def get_permissions(self):
-        return self.permissions
+    def get_perms(self) -> dict:
+        return self.perms
 
-    def set_role_name(self, role_name: str):
+    def set_role_name(self, role_name: str) -> None:
         self.role_name = role_name
 
-    def get_role_name(self):
+    def get_role_name(self) -> str:
         return self.role_name
