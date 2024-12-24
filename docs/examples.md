@@ -1,5 +1,3 @@
-from png import Default
-
 # Forge API
 
 ### Setup
