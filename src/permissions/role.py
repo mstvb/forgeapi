@@ -17,10 +17,15 @@ class Role:
     """
     __slots__ = ['role_name', 'perms']
 
-    def __init__(self, role_name: str, perms: dict[str, bool]) -> None:
+    def __init__(self, role_name: str, perms: dict or list) -> None:
         self.role_name = role_name
-        self.perms = perms
-
+        if isinstance(perms, dict):
+            self.perms = perms
+        elif isinstance(perms, list):
+            self.perms = {}
+            for perm in perms:
+                self.perms[perm] = True
+            
     def add_perm(self, perm: str, active: bool = True) -> None:
         self.perms[perm] = active
 
