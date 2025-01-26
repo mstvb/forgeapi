@@ -4,13 +4,16 @@ API
 
 ## Description
 
-Long Description
+In dieser API wird die Verwaltung von Usern / Players angegangen.
+Es sind auch Gamelogic Module vorhanden für die Erstellung von Achievments, Items usw..
+Dieses Modul spricht nicht nur Entwickler von Videospielen an sondern auch die Entwickler
+von System die User / Permission Manangement benötigen.
 
 ## Getting Started
 
 ### Dependencies
 
-* fastapi
+* none
 
 ### Installing
 

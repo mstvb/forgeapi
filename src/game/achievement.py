@@ -56,10 +56,13 @@ class Achievement:
         for requirement in self.requirements:
 
             if requirement['type'] is RequirementType.ITEM:
+
                 if player.has_item(requirement['item']):
                     player.remove_item(requirement['item'])
                     self.requirements.remove(requirement)
+
             elif requirement['type'] is RequirementType.LOCATION:
+
                 if player.get_location() is requirement['loc']:
                     self.requirements.remove(requirement)
 

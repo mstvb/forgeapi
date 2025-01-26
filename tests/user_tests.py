@@ -23,6 +23,7 @@ class TestPermissions(unittest.TestCase):
         user = User('add-user')
         user.add_permission('add-permission', True)
         self.assertTrue(user.has_permission('add-permission'))
+
     def test_remove_permission(self):
 
         user = User('remove-user')

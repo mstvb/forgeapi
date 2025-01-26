@@ -19,7 +19,7 @@ class Player:
         remove_item(item: Item) - Remove Item from Inventory from Player
         has_item(item: Item) - Return True when Item in Player Innventory
     """
-    __slots__ = ['location', 'inventory', 'xp']
+    __slots__ = ['location', 'inventory']
 
     def __init__(self, pos_x: int, pos_y: int):
         self.location = {'X': pos_x, 'Y': pos_y}
@@ -36,6 +36,3 @@ class Player:
 
     def has_item(self, item: Item):
         return True if self.inventory[item.item_name] else False
-
-    def add_experience(self, param):
-        pass
