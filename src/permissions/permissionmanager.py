@@ -10,8 +10,8 @@ class PermissionManager:
         role: [type] -> Role Class for Permissions
 
     Parameters:
-        perms (dict): Dictionary (str: bool) for Permissions
-        role (Role) Role for Permissions
+        perms: [dict] -> Dictionary (str: bool) for Permissions
+        role: [Role] -> Role for Permissions
 
     Methods:
         set_role: (role: Role) -> sets Role for Permissions
