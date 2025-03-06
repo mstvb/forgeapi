@@ -13,7 +13,7 @@ from forge.permissions import Role
 instance = Forge()
 
 # My roles
-admin_role = Role('Admin', {'forge.admin': True})
+admin_role = Role('Admin', ['role.admin'])
 
 # Add role
 instance.add_role(admin_role)
